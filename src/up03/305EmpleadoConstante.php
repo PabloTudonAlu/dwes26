@@ -4,11 +4,14 @@ class Empleado{
     const SUELDO_TOPE = 3000;
 
     //Constructor
-    public function __construct(private string $nombre, private string $apellidos, private float $sueldo, private array $numTelefonos){}
+    public function __construct(private string $nombre,
+                                private string $apellidos, 
+                                private float $sueldo, 
+                                private array $numTelefonos=[]){}
 
     //Setters
     public function setSueldo(string $sue){
-        $this->nombre = $sue;
+        $this->sueldo = $sue;
     }
 
     //Getters
@@ -54,7 +57,7 @@ class Empleado{
     }
 }
 
-$adrian = new Empleado("Adrian", "Requena Garces");
+$adrian = new Empleado("Adrian", "Requena Garces", 1000, [11111111, 23454312, 47839102]);
 $adrian->setSueldo(4000);
 
 echo ($adrian->debePagarImpuestos()?"Si":"No") . " debe pagar impuestos.";

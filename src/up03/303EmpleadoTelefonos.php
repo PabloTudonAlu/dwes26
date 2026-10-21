@@ -2,7 +2,10 @@
 
 class Empleado{
     //Constructor
-    public function __construct(private string $nombre, private string $apellidos, private float $sueldo, private array $numTelefonos){}
+    public function __construct(private string $nombre,
+                                private string $apellidos, 
+                                private float $sueldo, 
+                                private array $numTelefonos){}
 
     //Setters
     public function setNombre(string $nom){
@@ -14,7 +17,7 @@ class Empleado{
     }
 
     public function setSueldo(string $sue){
-        $this->nombre = $sue;
+        $this->sueldo = $sue;
     }
 
     //Getters
